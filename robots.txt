@@ -1,0 +1,11 @@
+# Correa Houses - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://correahouses.com.br/sitemap.xml
+
+# Bloquear arquivos de dados internos
+Disallow: /Dados/dados do cliente.txt
+Disallow: /Dados/Correa Houses*
+Disallow: /.vscode/

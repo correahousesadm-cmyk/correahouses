@@ -1,0 +1,15 @@
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Dados internos (não publicar)
+Dados/dados do cliente.txt
+Dados/Correa Houses*.html
+Dados/Correa Houses*_files/

@@ -1,0 +1,18 @@
+{
+  "name": "Correa Houses – Quitinetes Mobiliadas",
+  "short_name": "Correa Houses",
+  "description": "Quitinetes mobiliadas para alugar em Campo Grande MS. Aluguel com tudo incluído.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a2e",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "Dados/Logo/logo1.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
