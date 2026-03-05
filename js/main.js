@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close menu on outside click
     document.addEventListener('click', (e) => {
-        if (navMenu.classList.contains('show-menu') &&
+        if (navMenu?.classList.contains('show-menu') &&
             !navMenu.contains(e.target) &&
-            !navToggle.contains(e.target)) {
+            !(navToggle?.contains(e.target))) {
             closeMenu();
         }
     });
@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryExtra = document.getElementById('gallery-extra');
 
     galleryToggle?.addEventListener('click', () => {
+        if (!galleryExtra) return;
         galleryExtra.classList.toggle('show');
         const isShowing = galleryExtra.classList.contains('show');
 
@@ -228,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lightboxImg.alt = galleryImages[currentImageIndex].alt;
     }
 
-    // Attach click to gallery items
+    // Attach click to gallery items (desktop only — evitar lightbox acidental no mobile)
     document.addEventListener('click', (e) => {
         const galleryItem = e.target.closest('.gallery__item');
         if (galleryItem) {
@@ -247,14 +248,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close on backdrop click
     lightbox?.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target === lightbox.querySelector('.lightbox__content')) {
+        if (e.target === lightbox || e.target === lightbox?.querySelector('.lightbox__content')) {
             closeLightbox();
         }
     });
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
-        if (!lightbox.classList.contains('active')) return;
+        if (!lightbox?.classList.contains('active')) return;
 
         switch (e.key) {
             case 'Escape':
